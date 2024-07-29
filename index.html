@@ -274,118 +274,7 @@
 </section>
 <!-- End teaser video -->
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-sixths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-
-          <p style="font-size:18px;">
-         Diffusion model-based inverse problem solvers (DIS) enable unconditional diffusion models to solve a wide range of image inverse problems.
-         However, their application to video inverse problems involving temporal degradation remains limited.
-         In response, we present a novel approach for addressing video time deconvolution using only image-based diffusion models.
-         This innovation addresses the <strong> batch inconsistency </strong> issue in diffusion models by <strong> controlling batch-stochasticity </strong>,
-         thereby enabling <strong> batch-consistent sampling </strong>.
-         <br>
-
-        <table style="width: 80%; margin-left:auto; margin-right:auto; text-align: center; 
-        margin-top:20px; margin-bottom:20px; background-color: rgb(245, 242, 237);" border="3" cellpadding="3">
-          <tbody>
-            <tr>
-              <td style="width: 30%; font-size: 22px;"></td>
-              <td style="width: 50%; font-size: 22px;"><strong>Ours &#128513; </strong></td>
-            </tr>
-            <tr>
-              <td style="width: 30%; font-size: 20px; vertical-align:middle;">Video reconstruction</td>
-              <td style="width: 50%; font-size: 20px; vertical-align:middle;">Better Reconstruction Quality <br> & Batch Coherent Samples</td>
-            </tr>
-            <tr>
-              <td style="width: 30%; font-size: 20px; vertical-align:middle;">Memory effieciency</td>
-              <td style="width: 50%; font-size: 20px; vertical-align:middle;">Requires 13GB VRAM for 16-frame videos, maximum 32-frame in 24 GB VRAM.</td>
-            </tr>
-            <tr>
-              <td style="width: 30%; font-size: 20px; vertical-align:middle;">Adaptability</td>
-              <td style="width: 50%; font-size: 20px; vertical-align:middle;">Only use a pre-trained image diffusion model</td>
-            </tr>
-          </tbody>
-        </table>
-        
-        Experimental results confirm that our method demonstrates robustness against 
-        various combinations of temporal and spatial degradations, achieving state-of-the-art reconstructions.
-      </p>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-<!-- Forward -->
-<section class="section hero">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-sixths">
-        <h2 class="title is-3">Forward Operator</h2>
-        <div class="content has-text-justified">
-          <img src="static/images/1.png" alt="1" style="width: 70%"/>
-          <p style=" font-size:18px;">
-            Visualization of the forward operator we tackle in this work.
-            The uniform blur PSF kernel is convolved along the time dimension of the video.
-            In this work, we aim to reconstruct the measurement using only the image diffusion model.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End Forward -->
-    
-<!-- Method -->
-<section class="section hero">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-sixths">
-        <h2 class="title is-3">Method</h2>
-        <div class="content has-text-justified">
-          <img src="static/images/2.png" alt="2"/>
-          <p style=" font-size:18px;">
-            Geometric interpretation of controlling stochasticity.
-            By controlling <strong> stochastic directional components </strong> in the reverse diffusion process,
-            we showed <strong> batch-consistent sampling </strong> with state-of-the-art reconstruction performance.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End Method -->
-
-
-<!-- Downstream Tasks -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-sxiths">
-        <h2 class="title is-3">Experimental Results</h2>
-
-        <h2 class="title is-4">  1. Time deconvoltuion </h2>
-        <div class="content has-text-justified" style="margin-top:-15px; margin-bottom: 30px;">
-          <img src="static/images/3.png" alt="3" style="width: 70%">
-          <p style="margin-top:5px; margin-bottom: 10px; font-size:18px;">
-            As demonstrated by the teaser videos, our method results in a temporally consistent and superior quality.
-            Additionally, in the ablation study, only our complete method consistently achieves higher inter-batch similarity compared to the ground truth. 
-            This consistency ensures batch-consistent sampling by maintaining high inter-batch similarity throughout the reverse diffusion process.
-          </p>
-        </div>
-        
-        <hr class="solid">
-
-        <h2 class="title is-4"> 2. Combined temporal and spatial degradation </h2>
-
-      <!-- Teaser Carousel-->
+<!-- Teaser Carousel-->
 <section class="hero teaser">
   
   <div class="hero-body">
@@ -483,47 +372,128 @@
 
 </section>
 <!-- End teaser video -->
-      
-      <h3 class="title is-5"> Kitten → Puppy / Pig </h3>
-      <div class="columns is-centered">
-      <img src="static/images/src_kitten.png" alt="src_kitten" style="width: 33%">
-      <img-comparison-slider style="width: 60%;" hover="hover" value="66" class="rendered">
-      
-      <img slot="first" src="static/images/edit_cfgpp_both.png" width="1024px" height="512px">
-      <img slot="second" src="static/images/edit_cfg_both.png" width="1024px" height="512px">
-      
-      </img-comparison-slider>
-    </div>
+    
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-sixths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
 
-    <h3 class="title is-5">  Zebra → Horse / Alpaca </h3>
-      <div class="columns is-centered">
-      <img src="static/images/src_zebra.png" alt="src_zebra" style="width: 33%">
-      <img-comparison-slider style="width: 60%;" hover="hover" tabindex="0" class="rendered">
-      
-      <img slot="first" src="static/images/edit_cfgpp_both2.png" width="100%">
-      <img slot="second" src="static/images/edit_cfg_both2.png" width="100%">
-      </img-comparison-slider>
-      </div> 
+          <p style="font-size:18px;">
+         Diffusion model-based inverse problem solvers (DIS) enable unconditional diffusion models to solve a wide range of image inverse problems.
+         However, their application to video inverse problems involving temporal degradation remains limited.
+         In response, we present a novel approach for addressing video time deconvolution using only image-based diffusion models.
+         This innovation addresses the <strong> batch inconsistency </strong> issue in diffusion models by <strong> controlling batch-stochasticity </strong>,
+         thereby enabling <strong> batch-consistent sampling </strong>.
+         <br>
 
-    <div class="content has-text-justified" style="margin-bottom: 30px;">
-      <p style="margin-top:5px; font-size: 18px;">
-        The figures above compare image editing results using CFG and CFG++ followed by image inversion. 
-        During the editing stage, a word in the source text is swapped with the target concept, and this modified text 
-        is used as the condition for sampling. Our algorithm successfully works for both synthetic and real images.
+        <table style="width: 80%; margin-left:auto; margin-right:auto; text-align: center; 
+        margin-top:20px; margin-bottom:20px; background-color: rgb(245, 242, 237);" border="3" cellpadding="3">
+          <tbody>
+            <tr>
+              <td style="width: 30%; font-size: 22px;"></td>
+              <td style="width: 50%; font-size: 22px;"><strong>Ours &#128513; </strong></td>
+            </tr>
+            <tr>
+              <td style="width: 30%; font-size: 20px; vertical-align:middle;">Video reconstruction</td>
+              <td style="width: 50%; font-size: 20px; vertical-align:middle;">Better Reconstruction Quality <br> & Batch Coherent Samples</td>
+            </tr>
+            <tr>
+              <td style="width: 30%; font-size: 20px; vertical-align:middle;">Memory effieciency</td>
+              <td style="width: 50%; font-size: 20px; vertical-align:middle;">Requires 13GB VRAM for 16-frame videos, maximum 32-frame in 24 GB VRAM.</td>
+            </tr>
+            <tr>
+              <td style="width: 30%; font-size: 20px; vertical-align:middle;">Adaptability</td>
+              <td style="width: 50%; font-size: 20px; vertical-align:middle;">Only use a pre-trained image diffusion model</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        Experimental results confirm that our method demonstrates robustness against 
+        various combinations of temporal and spatial degradations, achieving state-of-the-art reconstructions.
       </p>
-    </div>
 
-    <hr class="solid">
-
-    <h2 class="title is-4" style="margin-top:-20px;"> <br> 3. Text-conditioned Inverse Problems w/ <a href=" https://github.com/LituRout/PSLD/tree/main?tab=readme-ov-file" style="color:slateblue">PSLD</a></h2>
-    <div class="content has-text-justified">
-      <img src="static/images/ldis_main_v2.png" alt="ldis_main"/>
-        <p style="margin-top:5px; margin-bottom: 10px; font-size: 18px;">
-          We show that CFG++ enables the incorporation of text prompts into a standard diffusion inverse solvers. 
-          Specifically, we focus on comparing the performance of PSLD combined with CFG and CFG++ in solving linear inverse problems.
-          CFG++ consistently delivers high-quality reconstructions across all tasks.
-        </p>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Forward -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-sixths">
+        <h2 class="title is-3">Forward Operator</h2>
+        <div class="content has-text-justified">
+          <img src="static/images/1.png" alt="1" style="width: 70%"/>
+          <p style=" font-size:18px;">
+            Visualization of the forward operator we tackle in this work.
+            The uniform blur PSF kernel is convolved along the time dimension of the video.
+            In this work, we aim to reconstruct the measurement using only the image diffusion model.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Forward -->
+    
+<!-- Method -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-sixths">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <img src="static/images/2.png" alt="2"/>
+          <p style=" font-size:18px;">
+            Geometric interpretation of controlling stochasticity.
+            By controlling <strong> stochastic directional components </strong> in the reverse diffusion process,
+            we showed <strong> batch-consistent sampling </strong> with state-of-the-art reconstruction performance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Method -->
+
+
+<!-- Downstream Tasks -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-sixths">
+        <h2 class="title is-3">Experimental Results</h2>
+
+        <h2 class="title is-4">  1. Time deconvoltuion </h2>
+        <div class="content has-text-justified" style="margin-top:-15px; margin-bottom: 30px;">
+          <div class="center-item">
+          <img src="static/images/3.png" alt="3" style="width: 70%">
+          <\div>
+          <p style=" font-size:18px;">
+            As demonstrated by the teaser videos, our method results in a temporally consistent and superior quality.
+            Additionally, in the ablation study, only our complete method consistently achieves higher inter-batch similarity compared to the ground truth. 
+            This consistency ensures batch-consistent sampling by maintaining high inter-batch similarity throughout the reverse diffusion process.
+          </p>
+        </div>
+        
+        <hr class="solid">
+
+        <h2 class="title is-4"> 2. Combined temporal and spatial degradation </h2>
+
+          <p style=" font-size:18px;">
+            As demonstrated by the teaser videos, our method results in a temporally consistent and superior quality.
+            Additionally, in the ablation study, only our complete method consistently achieves higher inter-batch similarity compared to the ground truth. 
+            This consistency ensures batch-consistent sampling by maintaining high inter-batch similarity throughout the reverse diffusion process.
+          </p>
+
+        </div>
+
       </div>
     </div>
   </div>
