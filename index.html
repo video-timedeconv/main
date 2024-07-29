@@ -323,6 +323,26 @@
 </section>
 <!-- End paper abstract -->
 
+<!-- Forward -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-sixths">
+        <h2 class="title is-3">Forward Operator</h2>
+        <div class="content has-text-justified">
+          <img src="static/images/1.png" alt="1"/>
+          <p style=" font-size:18px;">
+            Visualization of the forward operator we tackle in this work.
+            The uniform blur PSF kernel is convolved along the time dimension of the video.
+            In this work, we aim to reconstruct the measurement using only the image diffusion model.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Forward -->
+    
 <!-- Method -->
 <section class="section hero">
   <div class="container is-max-desktop">
@@ -330,13 +350,12 @@
       <div class="column is-four-sixths">
         <h2 class="title is-3">Method</h2>
         <div class="content has-text-justified">
-          <img src="static/images/rs_algorithm.png" alt="rs_algorithm"/>
+          <img src="static/images/2.png" alt="2"/>
           <p style=" font-size:18px;">
-            In CFG++, the renoising process after applying Tweedie’s formula should utilize the unconditional noise 
-            <span class="eps_null">$ \hat\epsilon_\varnothing $</span> instead of <span class="eps_cfg">$ \hat\epsilon^w_c $</span>. This surprisingly simple fix to the original CFG algorithm 
-            leads to smoother trajectory of generation. This improvement is also demonstrated in the following visualization of the discrete evolution of the posterior mean.
+            Geometric interpretation of controlling stochasticity.
+            By controlling <strong> stochastic directional components </strong> in the reverse diffusion process,
+            we showed <strong> batch-consistent sampling </strong> with state-of-the-art reconstruction performance.
           </p>
-          <img src="static/images/tweedie_progression.png" alt="tweedie_progression"/>
         </div>
       </div>
     </div>
