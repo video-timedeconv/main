@@ -283,11 +283,11 @@
         <div class="content has-text-justified">
 
           <p style="font-size:18px;">
-          Classifier-free guidance(CFG) is a fundamental tool in modern diffusion models for text-guided generation. 
-          Although effective, CFG's reliance on high guidance scales presents notable drawbacks. 
-          In response, we introduce simple solution to this seemingly inherent limitation: <strong>  CFG++ </strong> . 
-          This innovation addresses the off-manifold issue inherent in CFG, <strong> thereby enabling effective utilization 
-          of small guidance scales (0 &lt; $ \lambda $ &lt; 1) </strong>.
+         Diffusion model-based inverse problem solvers (DIS) enable unconditional diffusion models to solve a wide range of image inverse problems.
+         However, their application to video inverse problems involving temporal degradation remains limited.
+         In response, we present a novel approach for addressing video time deconvolution using only image-based diffusion models.
+         This innovation addresses the <strong> batch inconsistency </strong> issue in diffusion models by <strong> controlling batch-stochasticity </strong>,
+         thereby enabling <strong> batch-consistent sampling </strong>.
          <br>
 
         <table style="width: 80%; margin-left:auto; margin-right:auto; text-align: center; 
@@ -295,31 +295,25 @@
           <tbody>
             <tr>
               <td style="width: 30%; font-size: 22px;"></td>
-              <td style="width: 35%; font-size: 22px;"><strong>CFG &#128531; </strong></td>
-              <td style="width: 35%; font-size: 22px;"><strong>CFG++ &#128513; </strong></td>
+              <td style="width: 50%; font-size: 22px;"><strong>Ours &#128513; </strong></td>
             </tr>
             <tr>
-              <td style="width: 30%; font-size: 20px; vertical-align:middle;">T2I Generation</td>
-              <td style="width: 35%; font-size: 20px; vertical-align:middle;">Mode Collapse and Saturation</td>
-              <td style="width: 35%; font-size: 20px; vertical-align:middle;">Better Sample Quality <br> & Adherence to text</td>
+              <td style="width: 30%; font-size: 20px; vertical-align:middle;">Video reconstruction</td>
+              <td style="width: 50%; font-size: 20px; vertical-align:middle;">Better Reconstruction Quality <br> & Coherent Samples</td>
             </tr>
             <tr>
-              <td style="width: 30%; font-size: 20px; vertical-align:middle;">DDIM Inversion <br> w/ CFG(++)</td>
-              <td style="width: 35%; font-size: 20px; vertical-align:middle;">Breakdown</td>
-              <td style="width: 35%; font-size: 20px; vertical-align:middle;">Improves and enables better image editing</td>
+              <td style="width: 30%; font-size: 20px; vertical-align:middle;">Memory effieicnt</td>
+              <td style="width: 50%; font-size: 20px; vertical-align:middle;">Requires 13GB VRAM for 16-frame reconstruction, maximum 32-frame in 24 GB VRAM.</td>
             </tr>
             <tr>
-              <td style="width: 30%; font-size: 20px; vertical-align:middle;">PF-ODE trajectory</td>
-              <td style="width: 35%; font-size: 20px; vertical-align:middle;">Unnatural, Curved</td>
-              <td style="width: 35%; font-size: 20px; vertical-align:middle;">Smooth, Straighter</td>
+              <td style="width: 30%; font-size: 20px; vertical-align:middle;">Additional training or utilizing various neural networks</td>
+              <td style="width: 50%; font-size: 20px; vertical-align:middle;">Only use a pre-trained image diffusion model</td>
             </tr>
           </tbody>
         </table>
         
-
-        Experimental results confirm that our method significantly enhances performance in text-to-image generation, 
-        DDIM inversion, editing, and solving inverse problems, suggesting a wide-ranging impact and potential applications 
-        in various fields that utilize text guidance.
+        Experimental results confirm that our method demonstrates robustness against 
+        various combinations of temporal and spatial degradations, achieving state-of-the-art reconstructions.
       </p>
 
         </div>
